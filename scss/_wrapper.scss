@@ -1,6 +1,7 @@
 html,
 body {
 	height: 100%;
+	background-color: $background_color;
 }
 .wrapper {
 	display: flex;
@@ -10,3 +11,7 @@ body {
 .content{
 	flex: 1 0 auto;
 }
+.container {
+    margin: 0 auto;
+}
+	
