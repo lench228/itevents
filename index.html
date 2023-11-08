@@ -48,12 +48,12 @@
                 </div>
             </div>
         </section>
-        <main class="content">
-            <section class="content__cards cards">
-                <div class="container cards__container">
+        <main class="ivents">
+            <div class="container cards__container">
+                <ul class="ivents__cards cards">
 
-                </div>
-            </section>
+                </ul>
+            </div>
             <aside class="content__filter filter">
                 <header class ="filter__header">
                     <h3 class="filter__title">
@@ -110,23 +110,29 @@
 
 
         <template class = "card" id = "card">
-            <div class="card__main">
-                <h2 class="card__title">
+            <section class = card>
+                <div class="card__main">
+                    <div class="card__left">
+                        <h2 class="card__title">
+    
+                        </h2>
+                        <span class="card__number">
+        
+                        </span>
+                    </div>
 
-                </h2>
-                <span class="card__number">
-
-                </span>
-                <img src="" alt="#" class="card__image">
-            </div>
-            <aside class="card__aside">
-                <span class="card__type">
-
-                </span>
-                <p class="card__description">
-                </p>
-                <span class = "card__date"></span>
-            </aside>
+                    <img src="" alt="#" class="card__image">
+                </div>
+                <!-- ССЫЛКА НЕ РАБОТАЕТ -->
+                <a class="card__aside">
+                    <span class="card__type">
+    
+                    </span>
+                    <p class="card__description">
+                    </p>
+                    <span class = "card__date"></span>
+                </a>
+            </section>
         </template>
     </div>
     <script src = "js/main.js" type="module"></script>
