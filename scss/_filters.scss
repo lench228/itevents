@@ -1,0 +1,60 @@
+.filter {
+    padding: 20px;
+    color: $secondary_text;
+    position: relative;
+    top: 548px;
+    left: 79.2%;
+    background-color: $filters_back;
+    height: 548px;
+    max-width: 280px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__title {
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 114.972%; /* 27.593px */
+        letter-spacing: -1.44px;
+    }
+    &__evt-open {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 114.972%; /* 27.593px */
+        letter-spacing: -1.44px;
+
+        border-radius: 20px;
+        border: 1px solid #FFF;
+        background-color: transparent;
+    }
+    &__events {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    &__ivent {
+    }
+    &__date-open {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 114.972%; /* 27.593px */
+        letter-spacing: -1.44px;
+
+        border-radius: 20px;
+        border: 1px solid #FFF;
+        background-color: transparent;
+    }
+    &__dates {
+    }
+    }
+    .filter-evt {
+    }
+    .filter-date {
+    }
+    

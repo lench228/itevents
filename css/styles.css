@@ -156,21 +156,6 @@ body {
   line-height: 114.972%; /* 158.661px */
   letter-spacing: -4.14px;
 }
-.hero__button {
-  max-width: 173px;
-  border-radius: 16px;
-  color: #E58CC5;
-  border: 3px solid #E58CC5;
-  padding: 15px 30px;
-  font-family: Inter;
-  font-size: 31px;
-  font-weight: 400;
-  line-height: 114.972%; /* 35.641px */
-  text-decoration: none;
-}
-.hero__button:hover {
-  opacity: 0.5;
-}
 .hero__cards {
   position: absolute;
 }
@@ -215,6 +200,9 @@ body {
     font-size: 24px;
   }
 }
+.content {
+  position: absolute;
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, 700px);
@@ -222,6 +210,10 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+#card {
+  display: none;
+}
+
 .card {
   width: 100%;
   display: -webkit-box;
@@ -421,4 +413,72 @@ body {
   .about-us__title {
     font-size: 60px;
   }
+}
+.button {
+  max-width: 173px;
+  border-radius: 16px;
+  color: #E58CC5;
+  border: 3px solid #E58CC5;
+  padding: 15px 30px;
+  font-family: Inter;
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 114.972%; /* 35.641px */
+  text-decoration: none;
+}
+.button:hover {
+  opacity: 0.5;
+}
+
+.filter {
+  padding: 20px;
+  color: #FFFFFF;
+  position: relative;
+  top: 548px;
+  left: 79.2%;
+  background-color: #CCCAC0;
+  height: 548px;
+  max-width: 280px;
+}
+.filter__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.filter__title {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 114.972%; /* 27.593px */
+  letter-spacing: -1.44px;
+}
+.filter__evt-open {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 114.972%; /* 27.593px */
+  letter-spacing: -1.44px;
+  border-radius: 20px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+}
+.filter__events {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.filter__date-open {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 114.972%; /* 27.593px */
+  letter-spacing: -1.44px;
+  border-radius: 20px;
+  border: 1px solid #FFF;
+  background-color: transparent;
 }/*# sourceMappingURL=styles.css.map */
