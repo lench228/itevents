@@ -1,29 +1,93 @@
 .content {
-    .__cards {
+    &__cards {
     }
 }
 .cards {
-    .__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 700px);
+    justify-content: center;
+    &__container {
+
     }
 }
 
 
 
 .card {
-    .__main {
+    width: 100%;
+    display: flex;
+    height: 273px;
+
+    &__main {
+        padding: 20px;
+        padding-right: 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 58px;
+        border-bottom: 2px solid $cards_popups;
     }
-    .__title {
+    &__left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
     }
-    .__number {
+    &__title {
+        color: var(--, #252525);
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 114.972%; /* 27.593px */
+        letter-spacing: -1.44px;
     }
-    .__image {
+    &__number {
+        color: var(--, #252525);
+        font-family: Bodoni Moda;
+        font-size: 64px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 114.972%; /* 73.582px */
+        letter-spacing: -3.84px;
     }
-    .__aside {
+    &__image {
     }
-    .__type {
+    &__aside {
+        max-width: 248px;
+        padding: 20px;
+        padding-right: 12px;
+        gap: 6px;
+        color: $secondary_text;
+        display: flex;
+        background-color: $cards_popups;
+        flex-direction: column;
+
+        border-bottom: 2px solid $background_color
     }
-    .__description {
+    &__type {
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 114.972%; /* 27.593px */
+        letter-spacing: -1.44px;
     }
-    .__date {
+    &__description {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 114.972%; /* 13.797px */
+        letter-spacing: -0.72px;
     }
-}
+    &__date {
+        margin-top: auto;
+        color: #FFF;
+        font-family: Bodoni Moda;
+        font-size: 31.014px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 114.972%; /* 35.657px */
+        letter-spacing: -1.861px;
+    }
+    }
+    
