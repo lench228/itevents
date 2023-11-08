@@ -1,4 +1,5 @@
 .content {
+    position: absolute;
     &__cards {
     }
 }
@@ -11,8 +12,9 @@
     }
 }
 
-
-
+#card{
+    display: none;
+}
 .card {
     width: 100%;
     display: flex;

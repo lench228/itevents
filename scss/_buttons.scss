@@ -1,0 +1,16 @@
+.button {
+    max-width: 173px;
+    border-radius: 16px;
+    color: $cards_popups;
+    border: 3px solid $cards_popups;
+    padding: 15px 30px;
+
+    font-family: Inter;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 114.972%; /* 35.641px */
+    text-decoration: none;
+    &:hover{
+        opacity: 0.5;
+    }
+}
