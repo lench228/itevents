@@ -49,12 +49,85 @@
             </div>
         </section>
         <main class="content">
-         
+            <section class="content__cards cards">
+                <div class="container cards__container">
+
+                </div>
+            </section>
+            <aside class="content__filter filter">
+                <header class ="filter__header">
+                    <h3 class="filter__title">
+
+                    </h3>
+                    <img src="img/icons/Arrow-rigth.svg" alt="">
+                </header>
+                <select class="filter__sort-evt" name="events" id="events"></select>
+                <select class= "filter__sort-date" name = "date" id = "date"></select>
+            </aside>
         </main>
 
         <footer class="footer">
-            auu
+            <section class="about-us">
+                <div class="about-us__container container">
+                    <div class="about-us__decor">
+                        <div class="about-us__column">
+                            <span class = "about-us__pretitle">HEX</span>
+                            <p class="about-us__text">
+                                61626f7574207468652070<br>726f6a656374
+                            </p>
+                            <span class="about-us__date">
+                                20
+                            </span>
+                        </div>
+                        <div class="about-us__column">
+                            <span class = "about-us__pretitle"> ENG </span>
+                            <p class="about-us__text">
+                                about <br>
+                                the <br>
+                                project
+                            </p>
+                            <span class="about-us__date">
+                                23
+                            </span>
+                        </div>
+                    </div>
+                    <div class="about-us__credits">
+                        <h2 class="about-us__title">
+                            TechHunteduc<br>ationcenter
+                        </h2>
+                        <h2 class="about-us__title">
+                            convenient service
+                        </h2>
+                        <h2 class="about-us__title">
+                            contact
+                                22323-443-42
+                        </h2>
+                    </div>
+                </div>
+            </section>
         </footer>
+
+
+
+        <template class = "card" id = "card">
+            <div class="card__main">
+                <h2 class="card__title">
+
+                </h2>
+                <span class="card__number">
+
+                </span>
+                <img src="" alt="#" class="card__image">
+            </div>
+            <aside class="card__aside">
+                <span class="card__type">
+
+                </span>
+                <p class="card__description">
+                </p>
+                <span class = "card__date"></span>
+            </aside>
+        </template>
     </div>
     <script src = "js/main.js" type="module"></script>
 </body>
