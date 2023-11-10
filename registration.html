@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method = "post" class="modal__entrance modal">
+        <div class="entrance">
+        <div class="entrance__header">
+            <span class="entrance__date">06 11</span>
+            <h1 class="entrance__title">
+                TechHunt
+            </h1>
+        </div>
+        <div class="entrance__main">
+            <a href="#" class="entrance__about">About</a>
+            <div class="entrance__user-type">
+                <a href = '#'class="entrance__option  entrance__active" id = "entrance__user" name="user">
+                    User
+                </a>
+                <a href = '#' class="entrance__option" id = "entrance__organizer" name ="organizer">
+                    Organizer
+                </a>
+                <input type="hidden" name="userType" id="user__type">
+            </div>
+
+            <span class="entrance__begin">BEGIN</span>
+        </div>
+        <div class="entrance__textfields">
+            <div class="entrance__textfield">
+                <label class = "entrance__label" for = "email">Email</label>
+                <input class="entrance__input" name="email" type="email" placeholder="techhunt@gmail.com">
+            </div>
+            <div class="entrance__textfield">
+                <label class="entrance__label" for = "password">Name</label>
+                <input class = "entrance__input" type = "text" name = "password" placeholder="John Snow">
+            </div>
+        </div>
+        <button class="entrance__submit" type='submit'>
+            <svg style="background-color: transparent;" class = "" xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 94 94" fill="none">
+                <circle cx="47" cy="47" r="47" fill="#EBEAE5"/>
+                <path d="M69.1213 49.1213C70.2929 47.9497 70.2929 46.0503 69.1213 44.8787L50.0294 25.7868C48.8579 24.6152 46.9584 24.6152 45.7868 25.7868C44.6152 26.9584 44.6152 28.8579 45.7868 30.0294L62.7574 47L45.7868 63.9706C44.6152 65.1421 44.6152 67.0416 45.7868 68.2132C46.9584 69.3848 48.8579 69.3848 50.0294 68.2132L69.1213 49.1213ZM26 50H67V44H26V50Z" fill="black"/>
+              </svg>
+        </button>
+    </div>
+
+</form>
+<script src = "js/entrance.js"> </script>
+
+</body>
+</html>
