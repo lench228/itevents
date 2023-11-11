@@ -13,14 +13,14 @@
             <div class="container hero__container">
                 <div class="hero__links">
                     <a href="registration.html" class="hero__link">Login</a>
-                    <a href="#" class="hero__link">About</a>
+                    <a href="#about" class="hero__link">About</a>
                 </div>
                 <div class="hero__content">
                     <div class="hero__header">
                         <h1 class="hero__title">
                             TechHunt
                         </h1>
-                        <a href="#" class="hero__button button" >
+                        <a href="#ivents" class="hero__button button" >
                             Join now
                         </a>
                     </div>
@@ -45,11 +45,11 @@
                 </div>
                 <div class="hero__links hero__links-right">
                     <a href="registration.html" class="hero__link">Sign up</a>
-                    <a href="#" class="hero__link">Events</a>
+                    <a href="#ivents" class="hero__link" >Events</a>
                 </div>
             </div>
         </section>
-        <main class="ivents">
+        <main class="ivents" id = "ivents">
             <!-- <a href="#" class="button filters_button" id = "open-filters">Filters</a> -->
             <div class="container cards__container">
                 <ul class="ivents__cards cards">
@@ -59,7 +59,7 @@
         </main>
 
         <footer class="footer">
-            <section class="about-us">
+            <section class="about-us" id="about">
                 <div class="about-us__container container">
                     <div class="about-us__decor">
                         <div class="about-us__column">
@@ -99,46 +99,6 @@
             </section>
         </footer>
 
-        <form method = "post" class="modal__entrance modal hidden">
-            <div class="entrance__container">
-                <div class="entrance__header">
-                    <span class="entrance__date">06 11</span>
-                    <h1 class="entrance__title">
-                        TechHunt
-                    </h1>
-                </div>
-                <div class="entrance__main">
-                    <a href="#" class="entrance__about">About</a>
-                    <select name="entrance__user-type" id="">
-                        <option class="entrance__user entrance__option">
-                            User
-                        </option>
-                        <option class="entrance__organizer entrance__option">
-                            Organizer
-                        </option>
-                    </select>
-
-                    <span class="entrance__begin">BEGIN</span>
-                </div>
-                <div class="entrance__textfields">
-                    <div class="entrance__textfield">
-                        <label class = "entrance__label" for = "email">Email</label>
-                        <input class="entrance__input" name="email" type="email" placeholder="techhunt@gmail.com">
-                    </div>
-                    <div class="entrance__textfield">
-                        <label class="entrance__label" for = "password">Name</label>
-                        <input class = "entrance__input" type = "text" name = "password" placeholder="John Snow">
-                    </div>
-                </div>
-                <button type='submit'>
-                    <svg class = "" xmlns="http://www.w3.org/2000/svg" width="94" height="94" viewBox="0 0 94 94" fill="none">
-                        <circle cx="47" cy="47" r="47" fill="#EBEAE5"/>
-                        <path d="M69.1213 49.1213C70.2929 47.9497 70.2929 46.0503 69.1213 44.8787L50.0294 25.7868C48.8579 24.6152 46.9584 24.6152 45.7868 25.7868C44.6152 26.9584 44.6152 28.8579 45.7868 30.0294L62.7574 47L45.7868 63.9706C44.6152 65.1421 44.6152 67.0416 45.7868 68.2132C46.9584 69.3848 48.8579 69.3848 50.0294 68.2132L69.1213 49.1213ZM26 50H67V44H26V50Z" fill="black"/>
-                      </svg>
-                </button>
-            </div>
-
-        </form>
     </div>
     <script src = "js/main.js" type="module"></script>
 
