@@ -1,6 +1,6 @@
 
 const cardFragments = document.createDocumentFragment();
-const cardTemplate = document.querySelector('#card').content.querySelector('section');
+const cardTemplate = document.querySelector('#card__template').content.querySelector('a');
 
 const createCard  = (card) => {
     let currentCard = cardTemplate.cloneNode(1);
@@ -10,6 +10,7 @@ const createCard  = (card) => {
     currentCard.querySelector('.card__type').textContent= card.type;
     currentCard.querySelector('.card__description').textContent = card.description;
     currentCard.querySelector('.card__date').textContent = card.date;
+
     cardFragments.append(currentCard);
 }
 

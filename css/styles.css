@@ -266,6 +266,9 @@ body {
   line-height: 114.972%; /* 73.582px */
   letter-spacing: -4.8px;
 }
+.entrance__about:hover {
+  opacity: 0.8;
+}
 .entrance__user-type {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -343,18 +346,23 @@ body {
 }
 .entrance__input::-webkit-input-placeholder {
   color: #FFF;
+  opacity: 0.4;
 }
 .entrance__input::-moz-placeholder {
   color: #FFF;
+  opacity: 0.4;
 }
 .entrance__input:-ms-input-placeholder {
   color: #FFF;
+  opacity: 0.4;
 }
 .entrance__input::-ms-input-placeholder {
   color: #FFF;
+  opacity: 0.4;
 }
 .entrance__input::placeholder {
   color: #FFF;
+  opacity: 0.4;
 }
 .entrance__input:focus {
   outline: none;
@@ -416,8 +424,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 58px;
+  gap: 5px;
   border-bottom: 2px solid #E58CC5;
+  max-width: 420px;
 }
 .card__left {
   width: 100%;
@@ -489,6 +498,10 @@ body {
   font-weight: 400;
   line-height: 114.972%; /* 35.657px */
   letter-spacing: -1.861px;
+}
+.card:hover {
+  background-color: #E58CC5;
+  margin: 2px;
 }
 
 .about-us__container {
@@ -601,7 +614,7 @@ body {
   }
 }
 .button {
-  max-width: 173px;
+  max-width: 277px;
   border-radius: 16px;
   color: #E58CC5;
   border: 3px solid #E58CC5;

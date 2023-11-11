@@ -25,8 +25,10 @@
         padding-right: 40px;
         display: flex;
         justify-content: space-between;
-        gap: 58px;
+        gap: 5px;
         border-bottom: 2px solid $cards_popups;
+        max-width: 420px;
+
     }
     &__left{
         width: 100%;
@@ -91,5 +93,10 @@
         line-height: 114.972%; /* 35.657px */
         letter-spacing: -1.861px;
     }
+
+    &:hover{
+        background-color: $cards_popups;
+        margin: 2px;
     }
+}
     

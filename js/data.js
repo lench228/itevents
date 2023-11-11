@@ -1,33 +1,33 @@
 const DESCRIPTIONS = [
-    'In addition, useful excursions to enterprises, communication with experts from leading companies in the industry',
-    'We are waiting for the authors of current projects in a variety of technological fields and do not limit you In subjects. Projects can be either research, engineering or digital',
-    'We are waiting for useful excursions to enterprises,communication with experts from leading companies in the industry',
-    'We do not limit your imagination – but it is important that your idea solves a real problem. The works will be watched by real experts in their field – specialists from the Russian Railways company and tutors of the Federal Center for Additional Education, acting engineers and programmers',
-    'The teams that have shown the best results will be invited to a bright final event – there will be an opportunity to present their decision to the company`s management and, maybe, your project will be implemented',
+    'Дополнительно предоставляются полезные экскурсии на предприятия, общение с экспертами ведущих компаний отрасли.',
+    'Мы ожидаем авторов текущих проектов в различных технологических областях и не ограничиваем вас в выборе темы. Проекты могут быть исследовательскими, инженерными или цифровыми.',
+    'Мы ожидаем полезные экскурсии на предприятия и общение с экспертами ведущих компаний в отрасли.',
+    'Мы не ограничиваем ваше воображение, но важно, чтобы ваша идея решала реальную проблему. Ваши работы будут оцениваться настоящими экспертами в своей области - специалистами от компании "Российские Железные Дороги" и преподавателями Федерального центра дополнительного образования, а также действующими инженерами и программистами.',
+    'Команды, показавшие лучшие результаты, будут приглашены на яркое заключительное событие, где у них будет возможность представить свое решение руководству компании, и, возможно, ваш проект будет реализован.'
   ];
   
   const TITLES = [
-    'The Unruly Stream',
-    'Forum of Quantorians',
-    'Coder Symposium',
-    'Digital Collection',
-    'Innovation Congress',
+    'Беспокойный поток',
+    'Форум кванториан',
+    'Кодерский симпозиум',
+    'Цифровая коллекция',
+    'Конгресс инноваций',
   ];
 
   const TYPES = [
-    'Championship',
-    'Contest',
-    'Competition',
-    'Accelerator',
-    'Festival',
+    'Чемпионат',
+    'Конкурс',
+    'Соревнование',
+    'Акселератор',
+    'Фестиваль',
   ];
   
   const DATES = [
-    '26-30 June',
-    '12-15 Jule',
-    '27-29 Jule',
-    '11-16 August',
-    '18-22 Jule',
+    '26-30 Июня',
+    '12-15 Июля',
+    '27-29 Июля',
+    '11-16 Августа',
+    '18-22 Июля',
   ];
   const CARDS_COUNT = 5;
   

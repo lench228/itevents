@@ -53,6 +53,9 @@
         font-size: 64px;
         line-height: 114.972%; /* 73.582px */
         letter-spacing: -4.8px;
+        &:hover{
+            opacity: .8;
+        }
     }
     &__user-type {
         display: flex;
@@ -130,9 +133,11 @@
         letter-spacing: -2.325px;
         &::placeholder{
             color: #FFF;
+            opacity: .4;
         }
         &:focus{
             outline: none;
+            
         }
     }
     
