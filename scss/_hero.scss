@@ -35,6 +35,10 @@
         &-right{
             text-align: right;
         }
+        
+        &:hover{
+            opacity: .8;
+        }
     }
     &__content {
         display: flex;

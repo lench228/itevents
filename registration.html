@@ -10,13 +10,17 @@
     <form method = "post" class="modal__entrance modal">
         <div class="entrance">
         <div class="entrance__header">
-            <span class="entrance__date">06 11</span>
-            <h1 class="entrance__title">
+            <p class="entrance__date">
+                <span class="entrance__day"></span>
+                <span class="entrance__month"></span>
+            </p>
+            
+            <a href="index.html" class="entrance__title">
                 TechHunt
-            </h1>
+            </a>
         </div>
         <div class="entrance__main">
-            <a href="#" class="entrance__about">About</a>
+            <a href="index.html#about" class="entrance__about">About</a>
             <div class="entrance__user-type">
                 <a href = '#'class="entrance__option  entrance__active" id = "entrance__user" name="user">
                     User
@@ -24,7 +28,7 @@
                 <a href = '#' class="entrance__option" id = "entrance__organizer" name ="organizer">
                     Organizer
                 </a>
-                <input type="hidden" name="userType" id="user__type">
+                <input required type="hidden" name="userType" id="user__type">
             </div>
 
             <span class="entrance__begin">BEGIN</span>
@@ -32,11 +36,11 @@
         <div class="entrance__textfields">
             <div class="entrance__textfield">
                 <label class = "entrance__label" for = "email">Email</label>
-                <input class="entrance__input" name="email" type="email" placeholder="techhunt@gmail.com">
+                <input required class="entrance__input" name="email" type="email" placeholder="techhunt@gmail.com">
             </div>
             <div class="entrance__textfield">
                 <label class="entrance__label" for = "password">Name</label>
-                <input class = "entrance__input" type = "text" name = "password" placeholder="John Snow">
+                <input required class = "entrance__input" type = "text" name = "password" placeholder="John Snow">
             </div>
         </div>
         <button class="entrance__submit" type='submit'>
@@ -49,6 +53,6 @@
 
 </form>
 <script src = "js/entrance.js"> </script>
-
+<script src="js/current-date.js"></script>
 </body>
 </html>
