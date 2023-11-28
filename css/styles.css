@@ -395,10 +395,13 @@ body {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 700px);
+  grid-template-columns: repeat(auto-fill, 680px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
 }
 .cards__container {
   margin-bottom: 94px;
@@ -500,8 +503,8 @@ body {
   letter-spacing: -1.861px;
 }
 .card:hover {
-  background-color: #E58CC5;
-  margin: 2px;
+  background-color: #F0BFDF;
+  cursor: pointer;
 }
 
 .about-us__container {
@@ -627,4 +630,31 @@ body {
 }
 .button:hover {
   opacity: 0.5;
+}
+
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 4px; /* Расстояние между тегами */
+  row-gap: 6px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 12px;
+  line-height: 114.972%;
+  letter-spacing: -0.72px;
+}
+.tags__tag {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 4px 10px;
+}
+.tags__tag :hover {
+  color: #E58CC5;
+}
+.tags__link {
+  color: #FFFFFF;
+  text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */

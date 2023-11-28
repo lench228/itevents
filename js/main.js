@@ -8,6 +8,5 @@ for(let i= 0; i < 5; i++){
     cards[i] = createCard(i);
 }
 
-
 renderCards(cards);
 openPage(cards);

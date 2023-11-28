@@ -174,8 +174,8 @@
 </template>
 
 <template id = "card__template">
-    <a class = card>
-        <div class="card__main">
+    <div class = card>
+        <a class="card__main">
             <div class="card__left">
                 <h2 class="card__title">
 
@@ -186,7 +186,7 @@
             </div>
 
             <img src="" alt="#" class="card__image">
-        </div>
+        </a>
 
         <div class="card__aside">
             <span class="card__type">
@@ -194,10 +194,18 @@
             </span>
             <p class="card__description">
             </p>
+            <ul class="card__tags tags">
+
+            </ul>
             <span class = "card__date"></span>
         </div>
-    </a>
+    </div>
 </template>
 
+<template id = "tags__template">
+    <li class="tags__tag">
+        <a href="#" class="tags__link"></a>
+    </li>
+</template>
 
 </html>
