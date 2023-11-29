@@ -55,28 +55,29 @@
                 <ul class="ivents__cards cards">
 
                 </ul>
-            </div>
-        </main>
 
+            
+            </div>
+
+        </main>
+      
         <footer class="footer">
             <section class="about-us" id="about">
                 <div class="about-us__container container">
                     <div class="about-us__decor">
                         <div class="about-us__column">
-                            <span class = "about-us__pretitle">HEX</span>
+                            <span class = "about-us__pretitle">О нас</span>
                             <p class="about-us__text">
-                                61626f7574207468652070<br>726f6a656374
+                                Мы предоставляем  платформу для поиска и отслеживания самых актуальных мероприятий в области информационных технологий
                             </p>
                             <span class="about-us__date">
                                 20
                             </span>
                         </div>
                         <div class="about-us__column">
-                            <span class = "about-us__pretitle"> RUS </span>
+                            <span class = "about-us__pretitle"> Контакты </span>
                             <p class="about-us__text">
-                                О <br>
-                                Нашем <br>
-                                Проекте
+                                Связь с нами
                             </p>
                             <span class="about-us__date">
                                 23
@@ -85,14 +86,14 @@
                     </div>
                     <div class="about-us__credits">
                         <h2 class="about-us__title">
-                            TechHuntcente<br>robrazovaniya
+                            email
                         </h2>
                         <h2 class="about-us__title">
-                            Udobniy service
+                            glacies.flamma@gmail.com
                         </h2>
                         <h2 class="about-us__title">
-                            contact
-                                22323-443-42
+                            contact<br>
+                            +7(919)230-93-11
                         </h2>
                     </div>
                 </div>
@@ -100,8 +101,63 @@
         </footer>
 
     </div>
-    <script src = "js/main.js" type="module"></script>
+    <div class="open__card hidden">
+        <div class="open-card__container container">
+            <div class="open-card__left-column">
+                <h1 class="open-card__title">
+                    Я беббра хвзахвзахзва
+                </h1>
+                <img width="340px" height="464px" src="img/hero/image 5468.png" alt="#" class="open-card__image">
+            </div>
+            <div class="open-card__right-column">
+                <ul class="open-card__info">
+                    <li class="open-card__item">
+                        <h2 class="open-card__elem-title">
+                            Описание
+                        </h2>
+                        <p class="open-card__text">Мы ожидаем полезные экскурсии на предприятия и общение с экспертами ведущих компаний в отрасли.</p>
+                    </li>
+                    <li class="open-card__item">
+                        <h2 class="open-card__elem-title">
+                            Платформа проведения
+                        </h2>
+                        <p class="open-card__text">Очная форма проведения</p>
+                    </li>
+                    <li class="open-card__item">
+                        <h2 class="open-card__elem-title">
+                            Адрес
+                        </h2>
+                        <p class="open-card__text">Екатеринбург, улица Мира, 19</p>
+                    </li>
+                    <li class="open-card__item">
+                        <h2 class="open-card__elem-title">
+                            Организатор
+                        </h2>
+                        <p class="open-card__text">Агентство технологического развития</p>
+                    </li>
+                    <li class="open-card__item">
+                        <h2 class="open-card__elem-title">
+                            Теги
+                        </h2>
+                        <ul class="tags">
+                            
+                        </ul>
+                    </li>
+                </ul>
+                <div class="open-card__footer">
+                    <p class="open-card__date">
+                        Дата проведения:
+                        <span>
+                            1-99
+                        </span>
+                        Июля
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src = "js/main.js" type="module"></script>
 </body>
 
 
@@ -207,5 +263,62 @@
         <a href="#" class="tags__link"></a>
     </li>
 </template>
+
+<template id = "open-card__template">
+    <div class="open-card__container container">
+        <div class="open-card__left-column">
+            <h1 class="opent-card__title">
+                Я беб
+            </h1>
+            <img src="img/hero/image 5468.png" alt="#" class="open-card__image">
+        </div>
+        <div class="open-card__right-column">
+            <ul class="open-card__info">
+                <li class="open-card__item">
+                    <h2 class="open-card__title">
+                        Описание
+                    </h2>
+                    <p class="open-card__text"></p>
+                </li>
+                <li class="open-card__item">
+                    <h2 class="open-card__title">
+                        Платформа проведения
+                    </h2>
+                    <p class="open-card__text"></p>
+                </li>
+                <li class="open-card__item">
+                    <h2 class="open-card__title">
+                        Адрес
+                    </h2>
+                    <p class="open-card__text"></p>
+                </li>
+                <li class="open-card__item">
+                    <h2 class="open-card__title">
+                        Организатор
+                    </h2>
+                    <p class="open-card__text"></p>
+                </li>
+                <li class="open-card__item">
+                    <h2 class="open-card__title">
+                        Теги
+                    </h2>
+                    <ul class="tags">
+                        
+                    </ul>
+                </li>
+            </ul>
+            <div class="open-card__footer">
+                <p class="open-card__date">
+                    Дата проведения:
+                    <span>
+                        1-99
+                    </span>
+                    Июля
+                </p>
+            </div>
+        </div>
+    </div>
+</template>
+
 
 </html>
