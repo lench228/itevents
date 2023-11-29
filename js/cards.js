@@ -1,3 +1,4 @@
+import {openPage} from './card-popup.js';
 
 const cardFragments = document.createDocumentFragment();
 const cardTemplate = document.querySelector('#card__template').content.querySelector('div');
@@ -7,8 +8,6 @@ const tagsFragment = document.createDocumentFragment();
 const createTags = (currentCard) => {
     tagsFragment.innerHTML = '';
     const tags = currentCard.tags; 
-
-   console.log(tags);
     
     tags.forEach((tag) => {
         let tagElement = tagsTemplate.cloneNode(true);
@@ -18,6 +17,7 @@ const createTags = (currentCard) => {
     return(tagsFragment);
     
 };
+
 
 const createCard  = (card) => {
     let currentCard = cardTemplate.cloneNode(true);
@@ -31,7 +31,14 @@ const createCard  = (card) => {
     currentCard.querySelector('.card__description').textContent = card.description;
     currentCard.querySelector('.card__date').textContent = card.date;
 
+    const onCardClick = () => {
+        openPage(card);
+      };
+
+    currentCard.addEventListener('click', onCardClick);
+
     tagsContainer.append(createTags(card));
+
     cardFragments.append(currentCard);
 }
 

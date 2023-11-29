@@ -30,6 +30,9 @@
         border-bottom: 2px solid $cards_popups;
         max-width: 420px;
 
+        text-decoration: none;
+        color: $main_text;
+
     }
     &__left{
         width: 100%;
