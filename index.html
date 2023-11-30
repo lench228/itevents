@@ -108,6 +108,12 @@
                     Я беббра хвзахвзахзва
                 </h1>
                 <img width="340px" height="464px" src="img/hero/image 5468.png" alt="#" class="open-card__image">
+                <button class="button-confirm" id = "button__participate">
+                    Пойду
+                    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="30" viewBox="0 0 55 30" fill="none">
+                        <path d="M53.6929 16.3708C54.474 15.5897 54.474 14.3234 53.6929 13.5423L40.965 0.814407C40.1839 0.0333586 38.9176 0.0333586 38.1366 0.814407C37.3555 1.59546 37.3555 2.86179 38.1366 3.64283L49.4503 14.9565L38.1366 26.2703C37.3555 27.0513 37.3555 28.3176 38.1366 29.0987C38.9176 29.8797 40.1839 29.8797 40.965 29.0987L53.6929 16.3708ZM0.256836 16.9565L52.2787 16.9565V12.9565L0.256836 12.9565L0.256836 16.9565Z" fill="white"/>
+                      </svg>
+                </button>
             </div>
             <div class="open-card__right-column">
                 <ul class="open-card__info">
@@ -115,42 +121,49 @@
                         <h2 class="open-card__elem-title">
                             Описание
                         </h2>
-                        <p class="open-card__text">Мы ожидаем полезные экскурсии на предприятия и общение с экспертами ведущих компаний в отрасли.</p>
+                        <p class="open-card__text open-card-description">Мы ожидаем полезные экскурсии на предприятия и общение с экспертами ведущих компаний в отрасли.</p>
                     </li>
                     <li class="open-card__item">
                         <h2 class="open-card__elem-title">
                             Платформа проведения
                         </h2>
-                        <p class="open-card__text">Очная форма проведения</p>
+                        <p class="open-card__text open-card-place">Очная форма проведения</p>
                     </li>
                     <li class="open-card__item">
                         <h2 class="open-card__elem-title">
                             Адрес
                         </h2>
-                        <p class="open-card__text">Екатеринбург, улица Мира, 19</p>
+                        <p class="open-card__text open-card-adres">Екатеринбург, улица Мира, 19</p>
                     </li>
                     <li class="open-card__item">
                         <h2 class="open-card__elem-title">
                             Организатор
                         </h2>
-                        <p class="open-card__text">Агентство технологического развития</p>
+                        <p class="open-card__text  open-card-org">Агентство технологического развития</p>
                     </li>
                     <li class="open-card__item">
-                        <h2 class="open-card__elem-title">
+                        <h2 class="open-card__elem-title ">
                             Теги
                         </h2>
-                        <ul class="tags">
+                        <ul class="open-card__text tags open-card-tags">
                             
                         </ul>
                     </li>
                 </ul>
                 <div class="open-card__footer">
-                    <p class="open-card__date">
-                        Дата проведения:
-                        <span>
-                            1-99
+                    Дата проведения:
+                    <p class = "date open-card-date">
+                        <span class = "date__day-start date__day" >
+        
                         </span>
-                        Июля
+                        <span class = date__dash>-</span>
+        
+                        <span class = "date__day-end date__day">
+        
+                        </span>
+                        <span class = "date__month">
+        
+                        </span>
                     </p>
                 </div>
             </div>
@@ -253,7 +266,19 @@
             <ul class="card__tags tags">
 
             </ul>
-            <span class = "card__date"></span>
+            <p class = "date">
+                <span class = "date__day-start date__day" >
+
+                </span>
+                <span class = date__dash>-</span>
+
+                <span class = "date__day-end date__day">
+
+                </span>
+                <span class = "date__month">
+
+                </span>
+            </p>
         </div>
     </div>
 </template>
@@ -308,12 +333,18 @@
                 </li>
             </ul>
             <div class="open-card__footer">
-                <p class="open-card__date">
-                    Дата проведения:
-                    <span>
-                        1-99
+                <p class = "date open-card-date">
+                    <span class = "date__day-start date__day" >
+    
                     </span>
-                    Июля
+                    <span class = date__dash>-</span>
+    
+                    <span class = "date__day-end date__day">
+    
+                    </span>
+                    <span class = "date__month">
+    
+                    </span>
                 </p>
             </div>
         </div>

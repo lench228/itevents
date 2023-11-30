@@ -1,22 +1,11 @@
 import {openPage} from './card-popup.js';
+import { createTags } from './create-tags.js';
+import {renderDate} from './date-ivents.js';
 
 const cardFragments = document.createDocumentFragment();
 const cardTemplate = document.querySelector('#card__template').content.querySelector('div');
 
-const tagsTemplate = document.querySelector('#tags__template').content.querySelector('li');
-const tagsFragment = document.createDocumentFragment();
-const createTags = (currentCard) => {
-    tagsFragment.innerHTML = '';
-    const tags = currentCard.tags; 
-    
-    tags.forEach((tag) => {
-        let tagElement = tagsTemplate.cloneNode(true);
-        tagElement.querySelector('a').textContent = tag;
-        tagsFragment.appendChild(tagElement);
-    });
-    return(tagsFragment);
-    
-};
+
 
 
 const createCard  = (card) => {
@@ -29,11 +18,12 @@ const createCard  = (card) => {
     currentCard.querySelector('.card__image').src= card.url;
     currentCard.querySelector('.card__type').textContent= card.type;
     currentCard.querySelector('.card__description').textContent = card.description;
-    currentCard.querySelector('.card__date').textContent = card.date;
 
     const onCardClick = () => {
         openPage(card);
-      };
+    };
+
+    renderDate(card, currentCard);
 
     currentCard.addEventListener('click', onCardClick);
 
