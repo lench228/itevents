@@ -397,6 +397,7 @@ body {
 .content {
   position: absolute;
 }
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, 680px);
@@ -857,4 +858,117 @@ body {
   font-weight: 200;
   line-height: 114.972%;
   letter-spacing: -2.88px;
+}
+
+.form {
+  background: #E58CC5;
+  height: 100%;
+  padding: 20px 40px;
+}
+.form__container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+.form__fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 440px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.form__info {
+  padding: 20px;
+  width: 400px;
+  border-radius: 20px;
+  background: rgba(235, 234, 229, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.form__field textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  width: 100%;
+  color: #FFFFFF;
+  font-family: Inter;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.972%; /* 35.641px */
+  letter-spacing: -1.86px;
+  padding: 20px 15px;
+}
+.form__field textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: Inter;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.972%; /* 35.641px */
+  letter-spacing: -1.86px;
+}
+.form__field textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: Inter;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.972%; /* 35.641px */
+  letter-spacing: -1.86px;
+}
+.form__field textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: Inter;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.972%; /* 35.641px */
+  letter-spacing: -1.86px;
+}
+.form__field textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: Inter;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.972%; /* 35.641px */
+  letter-spacing: -1.86px;
+}
+.form__field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: Inter;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.972%; /* 35.641px */
+  letter-spacing: -1.86px;
+}
+.form__title {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Inter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 114.972%; /* 73.582px */
+  letter-spacing: -4.8px;
+  margin-bottom: 6px;
+}
+
+.button-confirm {
+  margin-top: auto;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

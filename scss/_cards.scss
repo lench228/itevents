@@ -1,7 +1,5 @@
 .content {
     position: absolute;
-    &__cards {
-    }
 }
 .cards {
     display: grid;
@@ -58,8 +56,7 @@
         line-height: 114.972%; /* 73.582px */
         letter-spacing: -3.84px;
     }
-    &__image {
-    }
+
     &__aside {
         max-width: 248px;
         padding: 20px;
