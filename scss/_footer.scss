@@ -1,5 +1,3 @@
-.footer {
-}
 .about-us {
     &__container {
         background-image: url('../img/about/Circle img.svg');
@@ -73,7 +71,7 @@
         text-transform: uppercase;
     }
 }
-//TODO
+
 @media(max-width: 768px){
     .about-us {
         &__container {

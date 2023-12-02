@@ -59,17 +59,14 @@
         flex-direction: column;
         gap: 40px;
     }
-    &__item {
-    }
+
     &__text {
         border-top: 2px solid #fff;
         background-color: #EAA3D1;
         border-radius: 0px 0px 30px 30px;
         padding: 20px;
     }
-    &__footer {
 
-    }
 
     &__date {
         display: flex;
@@ -94,10 +91,3 @@
         }
     }
 }
-.container {
-}
-.hidden {
-}
-.tags {
-}
-    
