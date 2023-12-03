@@ -15,9 +15,9 @@
         color: $secondary_text;
         margin: 90px auto;
         max-width: 1234px;
-        height: 827px;
+        min-height: 827px;
         background-color: $cards_popups;
-        padding: 32px 48px;
+        padding: 20px;
         display: grid;
         grid-template-columns: 378px 1fr;
 
@@ -25,10 +25,18 @@
 
         font-family: Inter;
     }
+
+
+
     &__left-column {
         display: flex;
-        gap: 30px;
+        gap: 20px;
         flex-direction: column;
+
+        .button-confirm{
+            margin: 0;
+            width: 340px;
+        }
     }
     &__title {
 
@@ -43,6 +51,8 @@
         font-weight: 600;
         line-height: 114.972%; /* 35.641px */
         letter-spacing: -1.86px;
+
+        margin-bottom: 12px;
     }
     &__image {
         border-radius: 20px;
@@ -52,19 +62,22 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        margin-top: 35px;
+
     }
     &__info {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 6px;
     }
 
     &__text {
+        max-width: 613px;
         border-top: 2px solid #fff;
         background-color: #EAA3D1;
         border-radius: 0px 0px 30px 30px;
         padding: 20px;
+
+        text-overflow: hidden;
     }
 
 

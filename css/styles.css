@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Inter:wght@300;400;500;600;700&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Inter:wght@200;300;400;500;600;700&family=VT323&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -696,9 +696,9 @@ body {
   color: #FFFFFF;
   margin: 90px auto;
   max-width: 1234px;
-  height: 827px;
+  min-height: 827px;
   background-color: #E58CC5;
-  padding: 32px 48px;
+  padding: 20px;
   display: grid;
   grid-template-columns: 378px 1fr;
   -webkit-column-gap: 211px;
@@ -710,11 +710,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.open-card__left-column .button-confirm {
+  margin: 0;
+  width: 340px;
 }
 .open-card__title {
   font-size: 64px;
@@ -728,6 +732,7 @@ body {
   font-weight: 600;
   line-height: 114.972%; /* 35.641px */
   letter-spacing: -1.86px;
+  margin-bottom: 12px;
 }
 .open-card__image {
   border-radius: 20px;
@@ -746,7 +751,6 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-top: 35px;
 }
 .open-card__info {
   display: -webkit-box;
@@ -756,13 +760,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 40px;
+  gap: 6px;
 }
 .open-card__text {
+  max-width: 613px;
   border-top: 2px solid #fff;
   background-color: #EAA3D1;
   border-radius: 0px 0px 30px 30px;
   padding: 20px;
+  text-overflow: hidden;
 }
 .open-card__date {
   display: -webkit-box;
@@ -806,7 +812,7 @@ body {
   letter-spacing: -1.861px;
 }
 .date__day-end {
-  margin-right: 4px;
+  margin-right: 10px;
 }
 .date__dash {
   font-style: italic;
@@ -832,6 +838,9 @@ body {
   letter-spacing: -2.88px;
 }
 .open-card-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -862,7 +871,7 @@ body {
 
 .form {
   background: #E58CC5;
-  height: 100%;
+  min-height: 100%;
   padding: 20px 40px;
 }
 .form__container {
@@ -906,11 +915,11 @@ body {
   color: #FFFFFF;
   font-family: Inter;
   font-size: 31px;
-  font-style: normal;
   font-weight: 400;
   line-height: 114.972%; /* 35.641px */
   letter-spacing: -1.86px;
   padding: 20px 15px;
+  resize: none;
 }
 .form__field textarea::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.3);
@@ -957,18 +966,42 @@ body {
   line-height: 114.972%; /* 35.641px */
   letter-spacing: -1.86px;
 }
+.form__select {
+  height: 86px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Inter;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 114.972%; /* 73.582px */
+  letter-spacing: -4.8px;
+  border: none;
+  background: transparent;
+}
+.form__select option {
+  background: #E58CC5;
+  font-size: 32px;
+}
+.form__select:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+.form__tag input {
+  display: none;
+  cursor: pointer;
+}
+.form__button {
+  margin-top: auto;
+  width: 100%;
+}
 .form__title {
   color: rgba(255, 255, 255, 0.6);
   font-family: Inter;
   font-size: 64px;
-  font-style: normal;
   font-weight: 500;
   line-height: 114.972%; /* 73.582px */
   letter-spacing: -4.8px;
   margin-bottom: 6px;
 }
 
-.button-confirm {
-  margin-top: auto;
-  width: 100%;
+input[type=checkbox]:checked + label {
+  color: #E58CC5;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,13 +1,6 @@
-.wrapper {
-}
-.add-event {
-    &__form {
-
-    }
-}
 .form {
     background: $cards_popups;
-    height: 100%;
+    min-height: 100%;
     padding: 20px 40px;
     &__container{
 
@@ -51,12 +44,13 @@
             color: $secondary_text;
             font-family: Inter;
             font-size: 31px;
-            font-style: normal;
             font-weight: 400;
             line-height: 114.972%; /* 35.641px */
             letter-spacing: -1.86px;
 
             padding: 20px 15px;
+
+            resize:none;
 
             &::placeholder{
                 color: rgba(255, 255, 255, 0.30);
@@ -70,26 +64,47 @@
             }
         }
     }
-    &__date {
-
-    }
     &__select {
+        height: 86px;
 
-    }
-    &__tags {
+        color: rgba(255, 255, 255, 0.60);
+        font-family: Inter;
+        font-size: 64px;
+        font-weight: 500;
+        line-height: 114.972%; /* 73.582px */
+        letter-spacing: -4.8px;
+
+        border: none;
+        background: transparent;
+        // background-image: url('../img/icons/arrow-down.svg');
+        // background-position-x: 85% ;
+        // background-position-y: 100%;
+
+        option{
+            background: $cards_popups;
+            font-size: 32px;
+        }        
+
+        &:hover{
+            color: rgba(255, 255, 255, 0.90);;
+        }
+
 
     }
     &__tag {
-
+        input{
+            display: none;
+            cursor: pointer;
+        }
     }
     &__button {
-
+        margin-top: auto;
+        width: 100%;
     }
     &__title{
         color: rgba(255, 255, 255, 0.60);
         font-family: Inter;
         font-size: 64px;
-        font-style: normal;
         font-weight: 500;
         line-height: 114.972%; /* 73.582px */
         letter-spacing: -4.8px;
@@ -97,11 +112,8 @@
         margin-bottom: 6px;
     }
 }
-.tags {
 
-}
-.button-confirm {
-    margin-top: auto;
-    width: 100%;
+input[type="checkbox"]:checked + label {
+    color: #E58CC5;
+  }
 
-}
