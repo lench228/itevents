@@ -15,7 +15,7 @@
         letter-spacing: -1.861px;
         
         &-end{
-            margin-right: 4px;
+            margin-right: 10px;
         }
     }
     &__dash {
@@ -47,6 +47,7 @@
 
     }
     &-date {
+        display: flex;
         justify-content: flex-end;
         .date__day {
             font-size: 48px;
@@ -72,6 +73,7 @@
             font-weight: 200;
             line-height: 114.972%;
             letter-spacing: -2.88px;
+
         }
     }
 }
