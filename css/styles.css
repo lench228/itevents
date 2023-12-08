@@ -260,7 +260,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 196px;
+  gap: 104px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -273,6 +273,7 @@ body {
   font-size: 64px;
   line-height: 114.972%; /* 73.582px */
   letter-spacing: -4.8px;
+  margin-right: 98px;
 }
 .entrance__about:hover {
   opacity: 0.8;
@@ -326,11 +327,11 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   position: relative;
-  top: 30px;
+  top: 35px;
   left: -15px;
   color: #EBEAE5;
   font-family: Inter;
-  font-size: 12px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 114.972%; /* 13.797px */
