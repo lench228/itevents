@@ -39,10 +39,11 @@
         
     }
     &__main {
-        
+        width: 100%;
         display: flex;
-        gap: 196px;
+        gap: 104px;
         
+        justify-content: flex-start;
         margin-bottom: 182px;
     }
     &__about{
@@ -53,6 +54,8 @@
         font-size: 64px;
         line-height: 114.972%; /* 73.582px */
         letter-spacing: -4.8px;
+
+        margin-right: 98px;
         &:hover{
             opacity: .8;
         }
@@ -85,7 +88,7 @@
         font-family: Inter;
         font-size: 96px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 114.972%; /* 110.373px */
         letter-spacing: -2.88px;
     }
@@ -105,12 +108,12 @@
     &__label {
         align-self: flex-end;
         position: relative;
-        top: 30px;
+        top: 35px;
         left: -15px;
 
         color: #EBEAE5;
         font-family: Inter;
-        font-size: 12px;
+        font-size: 22px;
         font-style: normal;
         font-weight: 400;
         line-height: 114.972%; /* 13.797px */
@@ -119,7 +122,6 @@
     &__input {
         box-sizing: border-box;
         background:none;
-        caret-color: transparent;
         width: 100%;
         padding: 15px 30px;
         border: 3px solid #EBEAE5;
