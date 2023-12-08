@@ -256,10 +256,14 @@ body {
   gap: 20px;
 }
 .entrance__main {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 196px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-bottom: 182px;
 }
 .entrance__about {
@@ -299,7 +303,7 @@ body {
   font-family: Inter;
   font-size: 96px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 114.972%; /* 110.373px */
   letter-spacing: -2.88px;
 }
@@ -336,7 +340,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: none;
-  caret-color: transparent;
   width: 100%;
   padding: 15px 30px;
   border: 3px solid #EBEAE5;
