@@ -54,13 +54,10 @@
         line-height: 114.972%; /* 158.661px */
         letter-spacing: -4.14px;
     }
-
-
     
     &__cards {
         position: absolute;   
     }
-    
 
     &__image{
         max-width: 120px;
@@ -82,8 +79,7 @@
     }
 }
 
-
-@media (max-width: 776px) {
+@media (max-width: 870px) {
     .hero{
         &__cards{
             display: none;
@@ -92,10 +88,16 @@
             font-size: 100px;
         }
         &__link{
-            font-size: 24px;
+            font-size: 20px;
         }
+    }
+}
+@media (max-width: 520px) {
+    .hero{
         &__button{
-            font-size: 24px;
+            font-size: 20px !important;
+            padding: 10px 15px  !important;
+            max-width: 120px !important;
         }
     }
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./vendor/multiplySelect/css/multiple-select.css">
     <title>TechHunt</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <section class="hero">
             <div class="container hero__container">
                 <div class="hero__links">
-                    <a href="registration.html" class="hero__link">Войти</a>
+                    <a href="login.html" class="hero__link">Войти</a>
                     <a href="#about" class="hero__link">О нас</a>
                 </div>
                 <div class="hero__content">
@@ -50,8 +51,70 @@
             </div>
         </section>
         <main class="ivents" id = "ivents">
-            <!-- <a href="#" class="button filters_button" id = "open-filters">Filters</a> -->
+            <div class="ivents__filters filters">
+                <div class="filters__container">
+                    <ul class="filters__buttons">
+                        <li class="filter__elem filter__elem-btn">
+                            <input checked type="radio" name="place" class="filter__button filter__button-radio" id="filters_default"></input>
+                            <label for="filters_default">Все события</label>
+                        </li>
+                        <li class="filter__elem filter__elem-btn">
+                            <input type="radio" name="place" class="filter__button filter__button-radio" id="filters__recomended"></input>
+                            <label for="filters__recomended">Рекомендованные</label>
+                        </li>
+                        <li class="filter__elem">
+                            <div class="form__group">
+                                <select class="filter__platform" id="filter__platform-select" name="platform">
+                                    <option value="ofline" class="filter__option">
+                                        Очная
+                                    </option>
+                                    <option value="online" class="filter__option">
+                                        Заочная
+                                    </option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="filter__elem">
+                            <div class="form__group">
+                                <select class="filter__tags" name="tags" id="filter__tags-select" multiple>
+                                    <option value="Фронтенд">Фронтенд</option>
+                                    <option value="Бэкенд">Бэкенд</option>                                   
+                                    <option value="Веб-разработка">Веб-разработка</option>                                  
+                                    <option value="Разработка ПО">Разработка ПО</option>                                  
+                                    <option value="Мобильная разработка">Мобильная разработка</option>                                  
+                                    <option value="Искусственный интеллект">Искусственный интеллект</option>                                  
+                                    <option value="Машинное обучение">Машинное обучение</option>                                  
+                                    <option value="Нейронные сети">Нейронные сети</option>                                                                
+                                    <option value="Информационная безопасность">Информационная безопасность</option>                                  
+                                    <option value="Кибербезопасность">Кибербезопасность</option>                       
+                                    <option value="Анализ данных">Анализ данных</option>                                   
+                                    <option value="Big Data">Big Data</option>                                  
+                                    <option value="Облачные технологии">Облачные технологии</option>                                  
+                                    <option value="Робототехника">Робототехника</option>                                  
+                                    <option value="DevOps">DevOps</option>                                  
+                                </select>   
+                            </div>
+                        </li>
+                        <li class="filter__elem">
+                            <div class="form__group">
+                                <select id='filter__types-select' class="filter__types">
+                                    <option value="">Мероприятия</option>
+                                    <option value="Фестиваль">Фестиваль</option>
+                                    <option value="Соревнование">Соревнование</option>
+                                    <option value="Чемпионат">Чемпионат</option>
+                                    <option value="Контент">Контент</option>
+                                    <option value="Акселератор">Акселератор</option>
+                                    <option value="Хакатон">Хакатон</option>
+                                    <option value="Форум">Форум</option>
+                                </select>
+                            </div>
+        
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="container cards__container">
+                
                 <ul class="ivents__cards cards">
 
                 </ul>
@@ -179,76 +242,26 @@
     </div>
 
     <script src = "js/main.js" type="module"></script>
+
+    <script src="./vendor/multiplySelect/js/multiple-select.js"></script>
+
+    <script>
+        let multipleSelect = new MultipleSelect('#filter__tags-select', {
+            placeholder: 'Теги'
+        })
+
+        let multipleSelect2 = new MultipleSelect('#filter__platform-select', {
+            placeholder: 'Платформа'
+        })
+
+        let multipleSelect3 = new MultipleSelect('#filter__types-select', {
+            placeholder: 'Вид'
+        })
+
+
+    </script>
 </body>
 
-
-
-<template id="filter">
-    <aside class="filter">
-        <header class ="filter__header">
-            <h3 class="filter__title">
-                Filter
-            </h3>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <rect x="0.22168" y="14.1422" width="20" height="2" transform="rotate(-45 0.22168 14.1422)" fill="white"/>
-                <rect x="1.41406" width="20" height="2" transform="rotate(45 1.41406 0)" fill="white"/>
-              </svg>
-        </header>
-        <form class="filter-evt" name="events" id="events">
-            <button class = filter__evt-open>
-                <span>Sort by events</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
-                    <path d="M7.29289 8.70711C7.68342 9.09763 8.31658 9.09763 8.70711 8.70711L15.0711 2.34315C15.4616 1.95262 15.4616 1.31946 15.0711 0.928932C14.6805 0.538408 14.0474 0.538408 13.6569 0.928932L8 6.58579L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L7.29289 8.70711ZM7 7V8H9V7H7Z" fill="white"/>
-                  </svg>
-            </button>
-            <ul class="filter__events">
-                <li class="filter__ivent">
-                    <input type="checkbox" id = "Championship">
-                    <label for="scales">Championship</label>
-                </li>
-                <li class="filter__ivent">
-                    <input type="checkbox" id = "Competition">
-                    <label for = "Competition">Competition</label>
-                </li>
-                <li class="filter__ivent">
-                    <input type="checkbox" id = "Competition">
-                    <label for = "Competition">Competition</label>
-                </li>
-                <li class="filter__ivent">
-                    <input type="checkbox" id = "Competition">
-                    <label for = "Competition">Competition</label>
-                </li>
-                <li class="filter__ivent">
-                    <input type="checkbox" id = "Competition">
-                    <label for = "Competition">Competition</label>
-                </li>
-                <li class="filter__ivent">
-                    <input type="checkbox" id = "Competition">
-                    <label for = "Competition">Competition</label>
-                </li>
-                <li class="filter__ivent">
-                    <input type="checkbox" id = "Competition">
-                    <label for = "Competition">Competition</label>
-                </li>
-                <li class="filter__ivent">
-                    <input type="checkbox" id = "Competition">
-                    <label for = "Competition">Competition</label>
-                </li>
-            </ul>
-        </form>
-        <form class= "filter-date" name = "date" id = "date">
-            <button class = filter__date-open>                
-                <span>Sort by days</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
-                    <path d="M7.29289 8.70711C7.68342 9.09763 8.31658 9.09763 8.70711 8.70711L15.0711 2.34315C15.4616 1.95262 15.4616 1.31946 15.0711 0.928932C14.6805 0.538408 14.0474 0.538408 13.6569 0.928932L8 6.58579L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L7.29289 8.70711ZM7 7V8H9V7H7Z" fill="white"/>
-                  </svg>
-            </button>
-            <ul class="filter__dates">
-                <input type="date">
-            </ul>
-        </form>
-    </aside>
-</template>
 
 <template id = "card__template">
     <div class = card>

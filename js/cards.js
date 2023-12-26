@@ -5,10 +5,15 @@ import {renderDate} from './date-ivents.js';
 const cardFragments = document.createDocumentFragment();
 const cardTemplate = document.querySelector('#card__template').content.querySelector('div');
 
-
-
+const createBriefDescription = (card, wordCount) => {
+    const words = card.description.split(' ');
+    const briefText = words.slice(0, wordCount).join(' ');
+    return briefText + (words.length > wordCount ? '...' : '');
+  }
 
 const createCard  = (card) => {
+    console.log(card);
+
     let currentCard = cardTemplate.cloneNode(true);
     let tagsContainer = currentCard.querySelector('.tags'); 
     tagsContainer.innerHTML = ''; 
@@ -17,7 +22,7 @@ const createCard  = (card) => {
     currentCard.querySelector('.card__number').textContent = `0${card.id}`;
     currentCard.querySelector('.card__image').src= card.url;
     currentCard.querySelector('.card__type').textContent= card.type;
-    currentCard.querySelector('.card__description').textContent = card.description;
+    currentCard.querySelector('.card__description').textContent = createBriefDescription(card, 20);
 
     const onCardClick = () => {
         openPage(card);
@@ -41,4 +46,6 @@ const createCards = (cards) => {
     cardsContainer.append(cardFragments)
 }
 
+
 export {createCards as renderCards}
+

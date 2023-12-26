@@ -8,7 +8,7 @@
 
 </head>
 <body>
-        <form action="" class="add-event__form form" method="POST">
+        <form action="http://localhost:3000/api/v1.0/newevent" class="add-event__form form" method="POST">
         <div class="form__container">
             <div class="form__fields">
                 <fieldset class="form__info">
@@ -16,26 +16,28 @@
                         <h2 class="form__title">
                             Название
                         </h2>
-                        <textarea required name="name" name="description" id="" cols="20" rows="2" placeholder="Впишите название мероприятия"></textarea>
+                        <textarea required name="event_title" name="event_title" id="" cols="20" rows="2" placeholder="Впишите название мероприятия"></textarea>
                     </div>
                     <div class="form__field">
                         <h2 class="form__title">
                             Организатор
                         </h2>
-                        <textarea required name="organiser" id="" cols="20" rows="2" placeholder="Впишите организатора мероприятия"></textarea>
+                        <textarea required name="event_organizer" id="" cols="20" rows="2" placeholder="Впишите организатора мероприятия"></textarea>
                     </div>
                     <div class="form__field">
                         <h2 class="form__title">
                             Адрес
                         </h2>
-                        <textarea required name="adres" id="" cols="20" rows="2" placeholder="Впишите адрес мероприятия"></textarea>
+                        <textarea required name="event_address" id="" cols="20" rows="2" placeholder="Впишите адрес мероприятия"></textarea>
                     </div>
                     <div class="form__field form__date">
                         <h2 class="form__title">
                             Дата
                         </h2>
-                        <textarea required name="date" rows="1" type="text" name="" id="" placeholder="Дата мероприятия"></textarea>
+                        <textarea required name="event_startdate" rows="1" type="text" name="" id="" placeholder="начало: гггг-мм-дд"></textarea>
+                        <textarea required name="event_enddate" rows="1" type="text" name="" id="" placeholder="конец: гггг-мм-дд"></textarea>
                     </div>
+                    
                     
                 </fieldset>
     
@@ -44,12 +46,12 @@
                         <h2 class="form__title">
                             Описание
                         </h2>
-                        <textarea required name="description" id="" cols="6" rows="19" placeholder="Укажите описание мероприятия"></textarea>
+                        <textarea required name="event_description" id="" cols="6" rows="19" placeholder="Укажите описание мероприятия"></textarea>
                     </div>
                 </fieldset>
                 
                 <fieldset class = "form__info">
-                    <select name='type' class="form__select" name="form__select" required>
+                    <select name='event_type' class="form__select" name="form__select" required>
                         <option value="">Мероприятия</option>
                         <option value="Фестиваль">Фестиваль</option>
                         <option value="Соревнование">Соревнование</option>
@@ -63,76 +65,76 @@
                         <h2 class="form__title">
                             Платформа
                         </h2>
-                        <textarea required name="platform" id="" cols="20" rows="2" placeholder="Впишите ссылку на платформу"></textarea>
+                        <textarea required name="event_platform" id="" cols="20" rows="2" placeholder="Впишите ссылку на платформу"></textarea>
                     </div>
                     <div class="form__info form__tags">
                         <h2 class="form__title">
                             Выбор тегов
                         </h2> 
-                            <ul name = "tags" class="tags"> 
+                            <ul name = "event_tags" class="tags"> 
                                 <li class="form__tag tags__tag">
                                     <input id = "frontend" type="checkbox"  value="Фронтенд">
-                                    <label for="frontend" class="tag"># Фронтенд</label>
+                                    <label for="frontend" class="tag">Фронтенд</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id ="backend" type="checkbox" value="Бэкенд">
-                                    <label for = "backend"># Бэкенд</label>
+                                    <label for = "backend">Бэкенд</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id = "web"type="checkbox"  value="Веб-разработка">
-                                    <label for = "web"># Веб-разработка</label>
+                                    <label for = "web">Веб-разработка</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id = "dev"type="checkbox" value="Разработка ПО">
-                                    <label for = "dev"># Разработка ПО</label>
+                                    <label for = "dev">Разработка ПО</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id = "mobile" type="checkbox"  value="Мобильная разработка">
-                                    <label for = "mobile"># Мобильная разработка</label>
+                                    <label for = "mobile">Мобильная разработка</label>
                                 </li >
                                 <li class="form__tag tags__tag" >
                                     <input id = "ai" type="checkbox" value="Искусственный интеллект">
-                                    <label for="ai"># Искусственный интеллект</label>
+                                    <label for="ai">Искусственный интеллект</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id="MaLe"type="checkbox" value="Машинное обучение">
-                                    <label for="MaLe">#  Машинное обучение</label>
+                                    <label for="MaLe">Машинное обучение</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id="ai2" type="checkbox"  value="Кибербезопасность">
-                                    <label for="ai2"># Нейронные сети</label>
+                                    <label for="ai2">Нейронные сети</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id="dataS" type="checkbox" value="Анализ данных">
-                                    <label for="dataS"># Анализ данных</label>
+                                    <label for="dataS">Анализ данных</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id="iSec" type="checkbox"  value="Информационная безопасность">
-                                    <label for="iSec"># Информационная безопасность</label>
+                                    <label for="iSec">Информационная безопасность</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id="cybsec" type="checkbox"  value="Кибербезопасность">
-                                    <label for="cybsec"># Кибербезопасность</label>
+                                    <label for="cybsec">Кибербезопасность</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id="dataAn" type="checkbox"  value="Анализ данных">
-                                    <label for="dataAn"># Анализ данных</label>
+                                    <label for="dataAn">Анализ данных</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id="bigData" type="checkbox"  value="Big Data">
-                                    <label for="bigData"># Big Data</label>
+                                    <label for="bigData">Big Data</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id="cloud" type="checkbox"  value="Облачные технологии">
-                                    <label for="cloud"># Облачные технологии</label>
+                                    <label for="cloud">Облачные технологии</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id="robo" type="checkbox"  value="Робототехника">
-                                    <label for="robo"># Робототехника</label>
+                                    <label for="robo">Робототехника</label>
                                 </li>
                                 <li class="form__tag tags__tag">
                                     <input id="devops" type="checkbox"  value="DevOps">
-                                    <label for="devops"># DevOps</label>
+                                    <label for="devops">DevOps</label>
                                 </li>
                             </ul>
                     </div>
