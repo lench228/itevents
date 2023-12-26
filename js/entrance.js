@@ -43,7 +43,5 @@ document.querySelector('.modal__register').addEventListener('submit', async (eve
     } catch (err) {
         console.log(err);
     }
-
-    //this.validate();
 });
 
