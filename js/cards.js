@@ -39,6 +39,7 @@ const createCard  = (card) => {
 
 const createCards = (cards) => {
     const cardsContainer = document.querySelector('.cards');
+    cardsContainer.innerHTML = '';
     cards.forEach((card) => {
         createCard(card);
     });

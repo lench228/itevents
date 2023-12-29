@@ -54,18 +54,18 @@
             <div class="ivents__filters filters">
                 <div class="filters__container">
                     <ul class="filters__buttons">
-                        <li class="filter__elem filter__elem-btn">
+                        <li class="filter__elem filter__elem-btn" data-filter="all">
                             <input checked type="radio" name="place" class="filter__button filter__button-radio" id="filters_default"></input>
                             <label for="filters_default">Все события</label>
                         </li>
-                        <li class="filter__elem filter__elem-btn">
-                            <input type="radio" name="place" class="filter__button filter__button-radio" id="filters__recomended"></input>
+                        <li class="filter__elem filter__elem-btn" data-filter="recommended">
+                            <input type="radio" name="place" class="filter__button filter__button-radio" id="filters__recommended"></input>
                             <label for="filters__recomended">Рекомендованные</label>
                         </li>
-                        <li class="filter__elem">
+                        <li class="filter__elem" data="platform">
                             <div class="form__group">
                                 <select class="filter__platform" id="filter__platform-select" name="platform">
-                                    <option value="ofline" class="filter__option">
+                                    <option value="offline" class="filter__option">
                                         Очная
                                     </option>
                                     <option value="online" class="filter__option">
@@ -74,7 +74,7 @@
                                 </select>
                             </div>
                         </li>
-                        <li class="filter__elem">
+                        <li class="filter__elem" data-filter="tags">
                             <div class="form__group">
                                 <select class="filter__tags" name="tags" id="filter__tags-select" multiple>
                                     <option value="Фронтенд">Фронтенд</option>
@@ -95,7 +95,7 @@
                                 </select>   
                             </div>
                         </li>
-                        <li class="filter__elem">
+                        <li class="filter__elem" data-filter="types">
                             <div class="form__group">
                                 <select id='filter__types-select' class="filter__types">
                                     <option value="">Мероприятия</option>

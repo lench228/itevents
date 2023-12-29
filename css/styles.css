@@ -647,6 +647,13 @@ body {
 .button:hover {
   opacity: 0.5;
 }
+.button.unactive {
+  pointer-events: none; /* делаем элемент неактивным для взаимодействия */
+  cursor: default; /*  курсор в виде стрелки */
+  color: #888;/* цвет текста серый */
+  border: 3px solid #888;
+}
+
 
 .button-confirm {
   display: -webkit-box;
@@ -676,6 +683,7 @@ body {
 }
 .filters__container {
   width: 100%;
+  margin-bottom: 10px;
 }
 .filters__buttons {
   display: grid;
@@ -715,9 +723,9 @@ body {
   color: #E58CC5;
 }
 
-input[type=radio]:checked + label {
+/* input[type=radio]:checked + label {
   color: #E58CC5;
-}
+} */
 
 .form__group div {
   width: 167px;
@@ -1180,9 +1188,9 @@ input[type=checkbox]:checked + label {
   color: #E58CC5;
 }
 
-input[type=radio]:checked + label {
+/* input[type=radio]:checked + label {
   color: #E58CC5;
-}
+} */
 
 .form__group div {
   width: 167px;

@@ -10,7 +10,6 @@ const addEventButton = document.querySelector('.hero__button');
 const participateButton = document.getElementById('button__participate');
 
 
-
 const token = localStorage.getItem('token');
 
 function updateLocalStorage(key, item) {
@@ -110,10 +109,14 @@ function fetchEvents() {
     return fetch('http://localhost:3000/api/v1.0/events');
 }
 
+
+
+
 fetchEvents()
 .then(res => res.json())
 .then(data => {
     events = data;
+    localStorage.setItem('fetchedEvents', JSON.stringify(events));
 
     for(let i= 0; i < events.length; i++) {
         cards[i] = createCard(events[i], i);
