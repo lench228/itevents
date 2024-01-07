@@ -2,13 +2,12 @@
     background: $cards_popups;
     min-height: 100%;
     padding: 20px 40px;
-    &__container{
 
+    &__container{
         max-width: 1440px;
         width: 100%;
         padding: 20px;
         margin: 0 auto;
-
     }
 
     &__fields{
@@ -114,4 +113,42 @@
 
 input[type="checkbox"]:checked + label {
     color: #E58CC5;
+  }
+
+
+  @media (max-width: 500px) {
+    .form {
+        select{
+            font-size: 40px;
+            letter-spacing: -2px;
+            max-width: 280px;
+        }
+        &__fields{
+            grid-template-columns: repeat(auto-fit, 320px);
+        }
+        &__field{
+            textarea {
+                max-width: 320px;
+                height: 7em;
+                font-size: 20px;
+            }
+        }
+        &__date{
+            max-width: 280px;
+        }
+        &__tags{
+            max-width: 240px;
+        }
+        &__button{
+            max-width: 320px;
+        }
+        &__title{
+            font-size: 42px;
+            letter-spacing: -2px;
+        }
+        &__container{
+            width: 100%;
+            padding: 0px;
+        }
+    }
   }

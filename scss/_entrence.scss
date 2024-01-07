@@ -166,3 +166,41 @@
         color: #C5589D;
     }
 }
+
+@media (max-width: 600px){
+    .entrance {
+        &__title{
+            font-size: 90px;
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .entrance {
+        &__begin{
+            display: none;
+        }
+        &__main{
+            gap: 0px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        &__user-type{
+            margin-top: 30px;
+        }
+        &__textfields{
+            display: flex;
+            flex-direction: column;
+        }
+        &__date{
+            display: none;
+        }
+        &__about{
+            display: none;
+        }
+        &__title{
+            margin-left: auto;
+        }
+    }
+}

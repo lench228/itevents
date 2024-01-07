@@ -77,24 +77,10 @@
 
 @media(max-width: 768px){
     .about-us {
-        &__container {
-            background-image: none;
-            display: flex;
-            padding: 0;
-            margin: 0;
-        }
-        &__decor {
-            display: none;
-            gap: 40px;
-        }
-        &__column {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
 
-        }
         &__title{
             font-size: 60px;
+            letter-spacing: 1px;
         }
         &__credits{
             
@@ -103,4 +89,27 @@
             font-size: 20px;
         }
     }
+}
+
+@media(max-width: 1024px){
+    .about-us {
+        &__decor {
+            display: none;
+            gap: 40px;
+        }
+        &__container {
+            background-image: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        &__column {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+    
+        }
+    }
+
+
 }

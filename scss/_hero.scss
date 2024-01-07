@@ -23,14 +23,14 @@
         max-width: 1350px;
 
         padding: 0 30px;
-        margin-top: 57px;
+        margin-top: 46px;
         display: grid;
-        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 5% 90% 5%;
         margin-bottom: 83px;
     }
     &__links {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
         &-right{
             text-align: right;
@@ -85,10 +85,14 @@
             display: none;
         }
         &__title{
-            font-size: 100px;
+            font-size: 80px;
         }
         &__link{
             font-size: 20px;
+        }
+        &__container{
+            height: 500px;
+         
         }
     }
 }
@@ -97,7 +101,8 @@
         &__button{
             font-size: 20px !important;
             padding: 10px 15px  !important;
-            max-width: 120px !important;
+            max-width: 100px !important;
+            margin-top: 10px;
         }
     }
 }
