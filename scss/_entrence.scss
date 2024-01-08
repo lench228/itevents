@@ -172,11 +172,24 @@
         &__title{
             font-size: 90px;
         }
+        &__option{
+            font-size: 48px;
+        }
+        &__input {
+            font-size: 22px;
+            &::placeholder{
+            }
+        }
+        &__label{
+            font-size: 16px;
+            top: 26px;
+        }
     }
 }
 
 @media (max-width: 1024px){
     .entrance {
+
         &__begin{
             display: none;
         }

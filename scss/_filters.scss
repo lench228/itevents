@@ -10,43 +10,37 @@
         justify-content: center;
         gap: 4px;
     }
-    }
-    .filter {
-        &__elem {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: $cards_popups;
-            padding: 8px 20px;
-            border-radius: 40px;
-
-            color: #fff;
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 114.972%; /* 27.593px */
-            letter-spacing: -1.44px;
-            
-            text-align: center;
-            
-        }
-        &__button-radio {
-            display: none;
-            cursor: pointer;
-        }
-        &__active{  
-            background-color: #fff;
-            color: $cards_popups;
-        }
-    }
-    .form {
-        &__group {
-
-        }
 }
+.filter {
+    &__elem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $cards_popups;
+        padding: 8px 20px;
+        border-radius: 40px;
+
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 114.972%; /* 27.593px */
+        letter-spacing: -1.44px;
+        
+        text-align: center;
+        
+    }
+    &__button-radio {
+        display: none;
+        cursor: pointer;
+    }
+    &__active{  
+        background-color: #fff;
+        color: $cards_popups;
+    }
+}
+
     
-input[type="radio"]:checked + label {
-    color: $cards_popups;
-}
+
 
 .form__group div{
     width: 167px;
@@ -93,14 +87,19 @@ input[type="radio"]:checked + label {
 }   
 
 .list-group-item {
-    color: #FFF;
+    color: #888;
+    padding-bottom: 5px;
     font-size: 24px;
     font-weight: 600;
     line-height: 114.972%; /* 27.593px */
     letter-spacing: -1.44px;
 
+    border-bottom: 2px solid rgba(255, 255, 255);
     :focus-visible{
         color: $cards_popups;
     }
 }
 
+.list-group-item-primary{
+    color: $cards_popups;
+}
