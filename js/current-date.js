@@ -1,5 +1,6 @@
 const n =  new Date();
-const m = n.getMonth() + 1;
-const d = n.getDate();
-document.querySelector(".entrance__date .entrance__day").textContent = d;
-document.querySelector(".entrance__date .entrance__month").textContent = m;
+const monthDate = n.getMonth();
+const dayDate = n.getDate();
+
+document.querySelector(".entrance__date .entrance__day").textContent = dayDate < 10 ? '0' + dayDate : dayDate;
+document.querySelector(".entrance__date .entrance__month").textContent =  monthDate < 10 ? '0' + (monthDate + 1) : monthDate + 1; 

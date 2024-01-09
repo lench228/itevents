@@ -15,9 +15,10 @@
     display: none;
 }
 .card {
-    width: 100%;
+    width: 680px;
     display: flex;
-    height: 273px;
+
+    height: auto;
 
     &__main {
         padding: 20px;
@@ -26,21 +27,21 @@
         justify-content: space-between;
         gap: 5px;
         border-bottom: 2px solid $cards_popups;
-        max-width: 420px;
+        width: 420px;
 
         text-decoration: none;
         color: $main_text;
 
     }
     &__left{
-        width: 100%;
+        max-width: 151px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         
     }
     &__title {
-        color: var(--, #252525);
+        color: #252525;
         font-family: Inter;
         font-size: 24px;
         font-weight: 300;
@@ -48,17 +49,20 @@
         letter-spacing: -1.44px;
     }
     &__number {
-        color: var(--, #252525);
-        font-family: Bodoni Moda;
-        font-size: 64px;
-        font-style: italic;
+        color: #252525;
+        font-family: VT323;
+        font-size: 90px;
         font-weight: 400;
-        line-height: 114.972%; /* 73.582px */
-        letter-spacing: -3.84px;
+        line-height: 114.972%; /* 110.373px */
+        letter-spacing: -5.76px;
+
+        width: 66px;
+        height: 77px;
+        text-align: start;
     }
 
     &__aside {
-        max-width: 248px;
+        width: 260px;
         padding: 20px;
         padding-right: 12px;
         gap: 6px;
@@ -66,6 +70,7 @@
         display: flex;
         background-color: $cards_popups;
         flex-direction: column;
+
 
         border-bottom: 2px solid $background_color
     }
@@ -91,3 +96,42 @@
     }
 }
     
+
+@media(max-width: 767px){
+    .cards{
+        grid-template-columns: 320px;
+        justify-content: center;
+        row-gap: 10px;
+    }
+    .card{
+        width: 320px;
+
+        justify-content: space-between;
+        &__image{
+            display: none;
+        }
+        &__main{
+            width: 120px;
+            padding: 20px;
+        }
+        &__aside{
+            width: 300px;
+            padding: 10px;
+        }
+        &__title{
+            font-size: 16px;
+            text-wrap: wrap;
+        }
+        .date{
+            font-size: 20px !important;
+        }
+        &__number{
+            width: 50px;
+            height: 50px;
+            font-size: 60px;
+        }
+        &__left{
+            max-width: 65px;
+        }
+    }
+}

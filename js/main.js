@@ -106,7 +106,7 @@ let cards = [];
 let events = [];
 
 function fetchEvents() {
-    return fetch('http://localhost:3000/api/v1.0/events');
+    return fetch('http://193.168.49.120:3001/api/v1.0/events');
 }
 
 

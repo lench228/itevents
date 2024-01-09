@@ -2,13 +2,17 @@
     font-family: Inter;
 
     &__container {
-        width: 100%;
+        max-width: 1400px;
+
+        margin: 0 auto;
+        margin-bottom: 29px;
     }
     &__buttons {
         display: grid;
         grid-template-columns: repeat(auto-fill, 244px);
         justify-content: center;
         gap: 4px;
+
     }
 }
 .filter {
@@ -27,7 +31,6 @@
         letter-spacing: -1.44px;
         
         text-align: center;
-        
     }
     &__button-radio {
         display: none;
@@ -37,6 +40,7 @@
         background-color: #fff;
         color: $cards_popups;
     }
+
 }
 
     
