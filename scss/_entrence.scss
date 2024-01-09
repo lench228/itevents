@@ -29,14 +29,14 @@
         margin-bottom: 93px;
     }
     &__date {
-        font-family: Bodoni Moda;
-        font-size: 64px;
-        font-style: italic;
-        line-height: 114.972%; /* 73.582px */
+        font-family: VT323;
+        font-size: 96px;
+        font-weight: 400;
+        line-height: 114.972%; /* 110.373px */
+        letter-spacing: -5.76px;
 
         display: flex;
-        gap:20px;
-        
+        gap:46px;
     }
     &__main {
         width: 100%;

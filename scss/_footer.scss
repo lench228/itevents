@@ -44,13 +44,14 @@
     }
     &__date {
         margin-top: auto;
+
         color: $main_text;
-        font-family: Bodoni Moda;
-        font-size: 64px;
-        font-style: italic;
+        font-family: VT323;
+        font-size: 96px;
+        font-style: normal;
         font-weight: 400;
-        line-height: 114.972%; /* 73.582px */
-        letter-spacing: -3.84px;
+        line-height: 114.972%; /* 110.373px */
+        letter-spacing: -5.76px;
     }
     &__credits {
         display: flex;
@@ -63,7 +64,7 @@
         width: 100%;
     }
     &__title {
-        color: #FFF;
+        color: $secondary_text;
         text-align: center;
         font-family: VT323;
         font-size: 64px;
@@ -108,6 +109,4 @@
     
         }
     }
-
-
 }

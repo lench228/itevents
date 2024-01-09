@@ -14,14 +14,12 @@ const popupImg = popupCard.querySelector('.open-card__image')
 
 const participateButton = document.getElementById('button__participate');
 
-const popupCloseBtn = popupCard.querySelector('.close-modal');
-
 const closePopup = () => {
     body.classList.remove('modal-open');
     popupCard.classList.add('hidden');
     popupCard.dataset.id = '';
     document.removeEventListener('keydown', onDocumentKeyDown);
-    popupCloseBtn.removeEventListener('click', onCloseBtnClick);
+    document.removeEventListener('click', onBodyClick, true);
 
 }
 
@@ -31,9 +29,13 @@ const onDocumentKeyDown = (evt) =>{
         closePopup();
     }
 }
-const onCloseBtnClick = (evt) =>{
+const onBodyClick = (evt) =>{
     evt.preventDefault();
-    closePopup();
+    console.log(evt.target);
+    if( !evt.target.classList[0].startsWith('open-') && body.classList.contains('modal-open')){
+        console.log(body.classList);
+        closePopup();
+    }
 }
 
 const renderPopup = (card) => {
@@ -76,15 +78,18 @@ const renderPopup = (card) => {
     tagsContainer.append(createTags(card));
 
     renderDate(card, popupCard);
-    popupCloseBtn.addEventListener('click', onCloseBtnClick)
-    document.addEventListener('keydown', onDocumentKeyDown)
 }
 
 const openPopup = (card) => {
     tagsContainer.innerHTML = ''; 
-    body.classList.add('modal-open');
     popupCard.classList.remove('hidden');
     renderPopup(card);
+
+    document.addEventListener('keydown', onDocumentKeyDown)
+    document.addEventListener('click', onBodyClick, true)
+
+
+    body.classList.add('modal-open');
 }
 
 
