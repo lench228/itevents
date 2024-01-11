@@ -31,38 +31,27 @@ const onDocumentKeyDown = (evt) =>{
 }
 const onBodyClick = (evt) =>{
     evt.preventDefault();
-    console.log(evt.target);
     if( !evt.target.classList[0].startsWith('open-') && body.classList.contains('modal-open')){
-        console.log(body.classList);
         closePopup();
     }
 }
 
 const renderPopup = (card) => {
-    popupCard.dataset.id = card.id;
+    popupCard.dataset.id = card.dataId;
     popupDescription.textContent = card.description;
     popupTitle.textContent = card.title;
     popupPlace.textContent = card.format;
     popupAdres.textContent = card.address;
     popupOrg.textContent = card.org;
 
-    
-    if (localStorage.getItem('likedEvents')) {
-        const storagedEvents = JSON.parse(localStorage.getItem('likedEvents'));
-        const index = card.id - 1; // Предполагая, что card.id - 1 является корректным индексом.
-    
-        if (index >= 0 && index < storagedEvents.length) {
-            const eventId = storagedEvents[index].event_id;
-            console.log(eventId);
-    
-            const foundEvent = storagedEvents.find(event => event.event_id === eventId);
-            if (foundEvent) {  
-                console.log(1111) 
-                participateButton.innerHTML = `Не пойду
+    const storagedEvents = JSON.parse(localStorage.getItem('likedEvents'));
+    if (storagedEvents && storagedEvents.length) {
+        const foundEvent = storagedEvents.find(event => event.event_id === card.dataId);
+        if (foundEvent) {
+            participateButton.innerHTML = `Не пойду
                 <svg xmlns="http://www.w3.org/2000/svg" width="55" height="30" viewBox="0 0 55 30" fill="none">
                         <path d="M53.6929 16.3708C54.474 15.5897 54.474 14.3234 53.6929 13.5423L40.965 0.814407C40.1839 0.0333586 38.9176 0.0333586 38.1366 0.814407C37.3555 1.59546 37.3555 2.86179 38.1366 3.64283L49.4503 14.9565L38.1366 26.2703C37.3555 27.0513 37.3555 28.3176 38.1366 29.0987C38.9176 29.8797 40.1839 29.8797 40.965 29.0987L53.6929 16.3708ZM0.256836 16.9565L52.2787 16.9565V12.9565L0.256836 12.9565L0.256836 16.9565Z" fill="white"/>
                       </svg>`;
-            } 
         } 
         else {
             participateButton.innerHTML = `Пойду
@@ -72,7 +61,6 @@ const renderPopup = (card) => {
         }
     }
     
-
     popupImg.src = card.url;
     
     tagsContainer.append(createTags(card));
@@ -88,12 +76,8 @@ const openPopup = (card) => {
     document.addEventListener('keydown', onDocumentKeyDown)
     document.addEventListener('click', onBodyClick, true)
 
-
     body.classList.add('modal-open');
 }
-
-
-
 
 
 export {openPopup as openPage};

@@ -1,14 +1,15 @@
+const BASEURL = 'http://193.168.49.120:3000';
+
 document.querySelector('.form').addEventListener('submit', async (event)  => {
     event.preventDefault();
     const formData = new FormData(event.target);
     
     const formObject = {};
     formData.forEach(function(value, key){
-        if (key === 'event_startdate' || key === 'event_enddate') {
+        // if (key === 'event_startdate' || key === 'event_enddate') {
 
-        }
+        // }
         formObject[key] = value;
-        // console.log(value);
     });
 
     const selectedTags = Array.from(document.querySelectorAll('.form__tags input[type="checkbox"]:checked'))
@@ -19,7 +20,7 @@ document.querySelector('.form').addEventListener('submit', async (event)  => {
     console.log(formObject);
 
     try {
-        const response = await fetch('http://localhost:3000/api/v1.0/newevent', {
+        const response = await fetch(`${BASEURL}/api/v1/create-event`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -14,6 +14,12 @@
     &:hover{
         opacity: 0.5;
     }
+    &.unactive {
+        pointer-events: none;
+        cursor: default;
+        color: #888;
+        border: 3px solid #888;
+    }
 }
 
 .button-confirm{

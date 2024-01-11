@@ -1,3 +1,5 @@
+const BASEURL = 'http://193.168.49.120:3000';
+
 document.querySelectorAll('.entrance__option').forEach(elem => elem.addEventListener('click', selectOption));
 
 function toggleActiveClass(elements, target) {
@@ -29,7 +31,7 @@ document.querySelector('.modal__register').addEventListener('submit', async (eve
     console.log(formObject);
 
     try {
-        const response = await fetch('http://localhost:3000/test/register', {
+        const response = await fetch(`${BASEURL}/test/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

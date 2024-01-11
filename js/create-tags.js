@@ -11,7 +11,6 @@ const createTags = (currentCard) => {
         tagsFragment.appendChild(tagElement);
     });
     return(tagsFragment);
-    
 };
 
 export{createTags};

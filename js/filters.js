@@ -1,36 +1,52 @@
 import{createCard} from './data.js';
 import {renderCards} from './cards.js';
 
+async function getRecommendations() {
+    const userId = localStorage.getItem('user_id');
+
+    fetch('http://193.168.49.120:3000/api/v1/recommended-events', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ user_id: userId }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        events = data.recommendations;
+
+        let cards = [];
+        const filteredStoredEvents = initialEvents
+        .filter(storedEvent => events.includes(storedEvent.event_id))
+        .sort((a, b) => {
+            const indexA = events.indexOf(a.event_id);
+            const indexB = events.indexOf(b.event_id);
+        
+            return indexA - indexB;
+          });
+
+        for(let i= 0; i < filteredStoredEvents.length; i++) {
+            cards[i] = createCard(filteredStoredEvents[i], i);
+        }
+
+        renderCards(cards);
+    })
+}
 
 const filterButtons = document.querySelectorAll('.filter__elem-btn');
 
 /// КНОПКИ фильтров
 const allEventsFilterButton = document.getElementById('filters_default');
-
 const selectPlatformButton = document.getElementById('filter__platform-select');
 const selectTypesButton = document.getElementById('filter__types-select');
-// Найти элемент <select> по его ID
 const selectTagsButton = document.getElementById('filter__tags-select');
-
-// Добавить обработчик события change
-
 
 const storedEvents = localStorage.getItem('fetchedEvents');
 const initialEvents = storedEvents ? JSON.parse(storedEvents) : [];
 let events = [];
 
-
-allEventsFilterButton.addEventListener('change', () => {
-    if (allEventsFilterButton.checked) {
-        console.log(100000000);
-    }
-});
-
-
+// возможно стоит переделать
 selectPlatformButton.addEventListener('change', () => {
-    console.log(1)
-    console.log(selectPlatformButton.value);
-
     if (selectPlatformButton.value === 'online') {
         events = initialEvents.filter(event => event.event_platform === 'Заочная форма проведения');
     }
@@ -42,16 +58,15 @@ selectPlatformButton.addEventListener('change', () => {
 
     for(let i= 0; i < events.length; i++) {
         cards[i] = createCard(events[i], i);
-        console.log(1);
     }
 
     renderCards(cards);
 });
 
+// вроде все правильно
 selectTagsButton.addEventListener('change', function() {
     // Получить все выбранные опции
     const selectedOptions = Array.from(selectTagsButton.selectedOptions).map(option => option.value);
-
 
     events = initialEvents.filter(event => {
         // Проверяем, есть ли хотя бы один выбранный тег в поле event_tags текущего объекта
@@ -62,17 +77,12 @@ selectTagsButton.addEventListener('change', function() {
 
     for(let i= 0; i < events.length; i++) {
         cards[i] = createCard(events[i], i);
-        console.log(1);
     }
 
     renderCards(cards);
-
-    // Вывести выбранные значения в консоль (или выполнить другие действия)
-    console.log(selectedOptions);
 });
 
-
-
+// тут все правильно
 selectTypesButton.addEventListener('change', () => {
     const type = selectTypesButton.value;
 
@@ -82,7 +92,6 @@ selectTypesButton.addEventListener('change', () => {
 
     for(let i= 0; i < events.length; i++) {
         cards[i] = createCard(events[i], i);
-        console.log(1);
     }
 
     renderCards(cards);
@@ -94,7 +103,7 @@ let currentActiveButton = filterButtons[0];
 currentActiveButton.style.backgroundColor = '#fff';
 currentActiveButton.style.color = '#E58CC5';
 
-
+// тут все правильно
 const onFilterBtnClick = (evt) => {
     evt.preventDefault();
     const clickedButton = evt.currentTarget;
@@ -105,38 +114,25 @@ const onFilterBtnClick = (evt) => {
 
         currentInactiveButton.style.backgroundColor = '#E58CC5';
         currentInactiveButton.style.color = '#fff';
-        console.log(currentInactiveButton.textContent);
 
         currentActiveButton.style.backgroundColor = '#fff';
         currentActiveButton.style.color = '#E58CC5';
     }
 
-    // if (clickedButton.dataset.filter !== 'tags') {
-    //     selectTagsButton.textContent = 'Теги';
-    // }
-
     if (clickedButton.dataset.filter === 'all') {
-
-
         let cards = [];
 
         for(let i= 0; i < initialEvents.length; i++) {
             cards[i] = createCard(initialEvents[i], i);
-            console.log(1);
         }
 
         renderCards(cards);
     }
     else if (clickedButton.dataset.filter === 'recommended') {
         console.log(2);
-        
-        
-    }
-
-    // else {
-
-    // }
     
+        getRecommendations();
+    }
 }
 
 filterButtons.forEach(button => {
