@@ -3,7 +3,7 @@ import{createCard} from './data.js';
 import {renderCards} from './cards.js';
 import './filters.js';
 
-const BASEURL = 'http://193.168.49.120:3000';
+const BASEURL = 'http://193.168.49.120';
 
 const loginButton = document.querySelector('.hero__links a:first-child');
 const registerButton = document.querySelector('.hero__links a:last-child');
@@ -21,7 +21,7 @@ function updateLocalStorage(key, item) {
 
 async function getUserNickname() {
     if (token) {
-        const response = await fetch(`${BASEURL}/test/user`, {
+        const response = await fetch(`${BASEURL}/api/v1/user`, {
         method: 'GET',
         headers: {
             'Authorization' : `Bearer ${token}`
@@ -38,6 +38,7 @@ async function getUserNickname() {
         localStorage.setItem('username', username);
         localStorage.setItem('user_id', id);
         registerButton.innerHTML = '';
+        addEventButton.classList.remove('unactive');
     }
     else {
         addEventButton.classList.add('unactive'); // пофиксить

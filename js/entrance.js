@@ -1,4 +1,4 @@
-const BASEURL = 'http://193.168.49.120:3000';
+const BASEURL = 'http://193.168.49.120';
 
 document.querySelectorAll('.entrance__option').forEach(elem => elem.addEventListener('click', selectOption));
 
@@ -31,7 +31,7 @@ document.querySelector('.modal__register').addEventListener('submit', async (eve
     console.log(formObject);
 
     try {
-        const response = await fetch(`${BASEURL}/test/register`, {
+        const response = await fetch(`${BASEURL}/api/v1/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

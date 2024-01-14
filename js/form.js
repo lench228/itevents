@@ -1,4 +1,4 @@
-const BASEURL = 'http://193.168.49.120:3000';
+const BASEURL = 'http://193.168.49.120';
 
 document.querySelector('.form').addEventListener('submit', async (event)  => {
     event.preventDefault();

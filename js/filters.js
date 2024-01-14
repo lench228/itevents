@@ -4,7 +4,7 @@ import {renderCards} from './cards.js';
 async function getRecommendations() {
     const userId = localStorage.getItem('user_id');
 
-    fetch('http://193.168.49.120:3000/api/v1/recommended-events', {
+    fetch('http://193.168.49.120/api/v1/recommended-events', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

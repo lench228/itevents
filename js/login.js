@@ -1,4 +1,4 @@
-const BASEURL = 'http://193.168.49.120:3000';
+const BASEURL = 'http://193.168.49.120';
 
 document.querySelector('.modal__login').addEventListener('submit', async (event)  => {
     event.preventDefault();
@@ -15,7 +15,7 @@ document.querySelector('.modal__login').addEventListener('submit', async (event)
     console.log(formObject);
 
     try {
-        const response = await fetch(`${BASEURL}/test/login`, {
+        const response = await fetch(`${BASEURL}/api/v1/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
